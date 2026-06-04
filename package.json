@@ -1,0 +1,10 @@
+{
+  "name": "sanover-global-food",
+  "version": "1.0.0",
+  "description": "Premium B2B Global Food Exporter website",
+  "private": true,
+  "scripts": {
+    "build": "echo 'No build step required'",
+    "start": "echo 'Static site'"
+  }
+}
