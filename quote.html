@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Commercial Quote | Sanover Global Food</title>
+  <meta name="description" content="Request custom pricing estimations, shipping logistics, L/C payment options, and physical grain samples CIF to your target port.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .quote-page-section {
+      background: radial-gradient(circle at center, var(--secondary-dark) 0%, var(--primary-dark) 100%);
+      padding: 10rem 0 6rem 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+    .quote-card-wrap {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      padding: 4rem;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .quote-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .quote-header h1 {
+      font-size: 2.5rem;
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+    .quote-header p {
+      color: var(--slate-grey);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER / NAVIGATION -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo" id="logoLink">
+        <img src="assets/logo.png" alt="Sanover Global Food" class="logo-img">
+        <span class="logo-text">
+          <span class="logo-title">SANOVER</span>
+          <span class="logo-subtitle">GLOBAL FOOD</span>
+        </span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="index.html#products" class="nav-link">Product</a></li>
+        <li><a href="index.html#about" class="nav-link">About</a></li>
+        <li><a href="index.html#certifications" class="nav-link">Certification</a></li>
+        <li><a href="index.html#support" class="nav-link">Support</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="quote.html" class="btn btn-gold header-quote-btn">Request Quote</a>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- QUOTE FORM SECTION -->
+  <section class="quote-page-section">
+    <div class="container">
+      <div class="quote-card-wrap">
+        <div class="quote-header">
+          <span class="section-subtitle">Direct Trade Desk Inquiry</span>
+          <h1>Request Global Trade Quote</h1>
+          <p>Provide your delivery and container specification details below. A trade desk executive will compile your pricing estimate options and email them within 24 hours.</p>
+        </div>
+
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="5964c460-1fb4-408f-af68-eb0af85b25ab">
+          <input type="hidden" name="from_name" value="Sanover Global Food">
+          <input type="hidden" name="subject" value="New Trade Portal Quote Request - Sanover Global Food">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="contactName">Your Name *</label>
+              <input class="form-input" type="text" id="contactName" name="name" placeholder="Full Name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contactCompany">Company Name *</label>
+              <input class="form-input" type="text" id="contactCompany" name="company" placeholder="Global Trade House" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contactCountry">Target Country *</label>
+              <input class="form-input" type="text" id="contactCountry" name="country" placeholder="United Arab Emirates" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contactEmail">Business Email *</label>
+              <input class="form-input" type="email" id="contactEmail" name="email" placeholder="buyer@company.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contactPhone">WhatsApp / Phone *</label>
+              <input class="form-input" type="tel" id="contactPhone" name="phone" placeholder="+971 50 123 4567" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contactProduct">Product Interested In *</label>
+              <select class="form-input" id="contactProduct" name="product" required style="background-color: var(--secondary-dark); cursor: pointer;">
+                <option value="">-- Choose Commodity --</option>
+                <option value="Basmati Rice">Premium Basmati Rice</option>
+                <option value="Non-Basmati Rice">Non-Basmati / IR64 Rice</option>
+                <option value="Foxnuts (Makhana)">Foxnuts (Makhana)</option>
+                <option value="Cumin Seeds">Cumin Seeds</option>
+                <option value="Refined Sugar">ICUMSA 45 White Sugar</option>
+              </select>
+            </div>
+            <div class="form-group form-group-full">
+              <label class="form-label" for="contactMsg">Required Tonnage, Port & Shipping Specifications *</label>
+              <textarea class="form-textarea" id="contactMsg" name="message" placeholder="Provide specs requirements, compliance parameters, target shipment delivery windows, L/C payment options, and CIF target port..." required></textarea>
+            </div>
+          </div>
+          <div class="form-buttons" style="margin-top: 2rem;">
+            <button class="btn btn-gold contact-form-btn" type="submit" style="width: 100%;">Submit Quotation Request</button>
+          </div>
+        </form>
+
+        <div class="success-msg">
+          <i class="fa-solid fa-envelope-circle-check" style="font-size: 4rem; color: var(--gold); display: block; margin-bottom: 1.5rem; text-shadow: 0 0 20px var(--gold-glow); text-align: center;"></i>
+          <h3 style="text-align: center; font-size: 1.8rem; margin-bottom: 1rem;">Quotation Request Transmitted</h3>
+          <p style="text-align: center;">Thank you for contacting Sanover Global Food. Our export department has registered your inquiry. A formal PDF quota draft will be sent to your email address shortly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <p>© 2026 Sanover Global Food Pvt Ltd. All Rights Reserved.</p>
+        <ul class="footer-legal-links">
+          <li><a href="index.html">Back to Home</a></li>
+          <li><a href="index.html#contact">Contact Desk</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script CDN dependencies -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  
+  <script src="main.js"></script>
+</body>
+</html>

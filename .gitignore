@@ -1,0 +1,8 @@
+# Local data backups
+inquiries.json
+feedbacks.json
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store

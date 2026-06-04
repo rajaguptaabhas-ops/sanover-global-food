@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanover Global Food Pvt Ltd | Premium Global Food Exporter</title>
+  <meta name="description" content="Trusted global supplier of premium Rice, Cumin Seeds, Foxnuts (Makhana), and Sugar. Delivering India's finest agricultural commodities to buyers worldwide.">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- HEADER / NAVIGATION -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo" id="logoLink">
+        <img src="assets/logo.png" alt="Sanover Global Food" class="logo-img">
+        <span class="logo-text">
+          <span class="logo-title">SANOVER</span>
+          <span class="logo-subtitle">GLOBAL FOOD</span>
+        </span>
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="#products" class="nav-link">Product</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#certifications" class="nav-link">Certification</a></li>
+        <li><a href="#support" class="nav-link">Support</a></li>
+      </ul>
+      
+      <div class="nav-right">
+        <a href="quote.html" class="btn btn-gold header-quote-btn" id="headerQuoteBtn">Request Quote</a>
+        <div class="hamburger" id="navHamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- START OF HERO SECTION CODE (PASTE OR ATTACH YOUR CUSTOM HERO CODE HERE) -->
+  <!-- ========================================================================= -->
+  <section class="relative w-full h-screen min-h-[800px] flex flex-col justify-center items-center text-center px-6 overflow-hidden bg-[#002147] style-hero-adjust">
+    <!-- Inline Tailwind Styling for the custom Stitch container -->
+    <style>
+      .style-hero-adjust {
+        position: relative;
+        z-index: 5;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .style-hero-adjust canvas {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.55;
+        mix-blend-mode: overlay;
+        z-index: 1;
+      }
+      .style-hero-adjust .overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom, rgba(0, 33, 71, 0.8) 0%, rgba(0, 33, 71, 0.4) 50%, #07111e 100%);
+        z-index: 2;
+      }
+      .style-hero-adjust .hero-content-stitch {
+        position: relative;
+        z-index: 3;
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+      .style-hero-adjust h1 {
+        font-size: 3.5rem;
+        line-height: 1.15;
+        color: #ffffff;
+        margin-bottom: 1.5rem;
+        text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+      }
+      .style-hero-adjust p {
+        font-size: 1.25rem;
+        color: #aec7f6;
+        margin-bottom: 2.5rem;
+        max-width: 650px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @media (max-width: 768px) {
+        .style-hero-adjust {
+          height: 80vh !important;
+        }
+        .style-hero-adjust h1 {
+          font-size: 2.2rem !important;
+          line-height: 1.25;
+        }
+        .style-hero-adjust p {
+          font-size: 1.05rem !important;
+          margin-bottom: 1.5rem !important;
+        }
+      }
+    </style>
+    <canvas id="hero-canvas"></canvas>
+    <div class="overlay"></div>
+    <div class="hero-content-stitch">
+      <h1>Delivering India's Finest Agricultural Products Worldwide</h1>
+      <p>Uncompromising quality, seamless logistics, and global scale for B2B agricultural commodity trading.</p>
+      <div class="flex gap-4 justify-center">
+        <a class="btn btn-gold" href="#products" style="background: #C5A059; color: #002147; border-color: #C5A059;">Explore Portfolio</a>
+      </div>
+    </div>
+  </section>
+  <!-- ========================================================================= -->
+  <!-- END OF HERO SECTION CODE -->
+  <!-- ========================================================================= -->
+
+
+
+  <!-- ABOUT COMPANY SECTION -->
+  <section class="about-section section-padding" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-map-container" id="about-map-container">
+          <video id="globe-video" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;">
+            <source src="assets/globe.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="about-content">
+          <span class="section-subtitle">Global Food Export Excellence</span>
+          <h2 class="section-title">Sanover Global Food</h2>
+          <p style="margin-top: 1.5rem;">
+            At Sanover Global Food Pvt Ltd, we serve as a premier agricultural trade connection link between India's fertile fields and the global marketplace. Built on international compliance protocols and premium specifications, we supply bulk food grains and specialized agricultural products to global trading houses, hypermarkets, and institutional buyers.
+          </p>
+          <p>
+            By managing the entire logistics value chain—from sourcing, mechanical cleaning, Sortex sorting, and double-layered seaworthy packaging to strict pre-shipment inspections and customs clearance—we assure a reliable supply chain.
+          </p>
+          
+          <div class="about-features">
+            <div class="about-feat-item">
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <h4 class="about-feat-title">Strict Compliance</h4>
+                <p class="about-feat-desc">Fully compliant with ISO 22000, FDA, HACCP, and regional regulations.</p>
+              </div>
+            </div>
+            <div class="about-feat-item">
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <h4 class="about-feat-title">High Quality Grading</h4>
+                <p class="about-feat-desc">Sortex-cleaned, uniform sizing, and low moisture retention grains.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS SECTION -->
+  <section class="products-section section-padding" id="products">
+    <div class="container">
+      <div class="section-title-wrap">
+        <h2 class="section-title">Our Premium Commodities Portfolio</h2>
+        <p class="portfolio-disclaimer" style="font-size: 0.75rem; color: var(--slate-grey); opacity: 0.6; margin-top: 0.5rem; letter-spacing: 0.5px;">Images are for reference only. Actual product may vary.</p>
+      </div>
+      
+      <div class="products-grid">
+        <!-- Product 1: Rice -->
+        <div class="product-card" onclick="window.location.href='rice.html'">
+          <div class="product-image-wrap">
+            <img src="assets/rice.jpg" alt="Premium Rice" class="product-img">
+          </div>
+          <h3>Premium Rice</h3>
+          <p>Superlative Basmati and Non-Basmati varieties sourced from irrigated Indo-Gangetic plains. Long grains, rich aroma, and perfect texture.</p>
+          <span class="btn btn-outline-gold">View Details</span>
+        </div>
+
+        <!-- Product 2: Foxnuts -->
+        <div class="product-card" onclick="window.location.href='makhana.html'">
+          <div class="product-image-wrap">
+            <img src="assets/makhana.jpg" alt="Foxnuts (Makhana)" class="product-img">
+          </div>
+          <h3>Foxnuts (Makhana)</h3>
+          <p>Top-grade popped water lily seeds. Rich in proteins, handpicked and size-sorted ranging from 14mm to over 22mm diameter.</p>
+          <span class="btn btn-outline-gold">View Details</span>
+        </div>
+
+        <!-- Product 3: Cumin Seeds -->
+        <div class="product-card" onclick="window.location.href='cumin.html'">
+          <div class="product-image-wrap">
+            <img src="assets/cumin.jpg" alt="Premium Cumin Seeds" class="product-img">
+          </div>
+          <h3>Premium Cumin</h3>
+          <p>Machine-cleaned, Sortex-sorted cumin seeds with high essential oil levels. Formulated for Europe and Singapore market specifications.</p>
+          <span class="btn btn-outline-gold">View Details</span>
+        </div>
+
+        <!-- Product 4: Sugar -->
+        <div class="product-card" onclick="window.location.href='sugar.html'">
+          <div class="product-image-wrap">
+            <img src="assets/sugar.jpg" alt="Premium White Sugar" class="product-img">
+          </div>
+          <h3>Crystal Sugar</h3>
+          <p>Export-quality refined white crystal sugar (ICUMSA 45). Highly soluble, sparkling white crystals, and maximum purity levels.</p>
+          <span class="btn btn-outline-gold">View Details</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT SPECIFICATION SECTION -->
+  <section class="spec-section section-padding">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-subtitle">Export Standards & Grade Breakdown</span>
+        <h2 class="section-title">Technical Specifications</h2>
+      </div>
+
+      <div class="spec-tabs">
+        <button class="spec-tab-btn active" data-target="spec-rice">Premium Rice</button>
+        <button class="spec-tab-btn" data-target="spec-makhana">Foxnuts (Makhana)</button>
+        <button class="spec-tab-btn" data-target="spec-cumin">Cumin Seeds</button>
+        <button class="spec-tab-btn" data-target="spec-sugar">White Sugar</button>
+      </div>
+
+      <div class="spec-content-wrap">
+        <!-- Tab 1: Rice -->
+        <div class="spec-table-container active" id="spec-rice">
+          <div class="spec-table-info">
+            <h3>Premium Basmati Specifications</h3>
+            <p>Export specifications for 1121 Golden Sella Basmati and Steam varieties. Built to satisfy international customs and food standard rules.</p>
+            <table class="spec-table-data">
+              <tr>
+                <td class="label">Origin</td>
+                <td class="value">India (Indo-Gangetic Basin)</td>
+              </tr>
+              <tr>
+                <td class="label">Average Grain Length</td>
+                <td class="value">8.35 mm to 8.40 mm</td>
+              </tr>
+              <tr>
+                <td class="label">Moisture Content</td>
+                <td class="value">Under 12.5% Max</td>
+              </tr>
+              <tr>
+                <td class="label">Purity Level</td>
+                <td class="value">95% Minimum</td>
+              </tr>
+              <tr>
+                <td class="label">Packaging Available</td>
+                <td class="value">10kg, 20kg, 25kg, 50kg PP / Jute Bags</td>
+              </tr>
+              <tr>
+                <td class="label">Container Loading</td>
+                <td class="value">20 to 25 Metric Tons per 20ft FCL</td>
+              </tr>
+              <tr>
+                <td class="label">Shelf Life</td>
+                <td class="value">24 Months</td>
+              </tr>
+            </table>
+          </div>
+          <div class="spec-image-box">
+            <div class="spec-image-overlay">
+              <span>Agri-commodity</span>
+              <h4>Indo-Basmati Premium Grain</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Makhana -->
+        <div class="spec-table-container" id="spec-makhana">
+          <div class="spec-table-info">
+            <h3>Export Grade Foxnut Specifications</h3>
+            <p>Our foxnuts are double-sifted, dry heated, popped, and mechanically graded based on standardized size measurements.</p>
+            <table class="spec-table-data">
+              <tr>
+                <td class="label">Origin</td>
+                <td class="value">India (Bihar Region)</td>
+              </tr>
+              <tr>
+                <td class="label">Moisture Content</td>
+                <td class="value">5% to 6.5% Max</td>
+              </tr>
+              <tr>
+                <td class="label">Sizing Grades</td>
+                <td class="value">5 Sutta (14-18mm) • 6 Sutta (18-24mm)</td>
+              </tr>
+              <tr>
+                <td class="label">Purity Level</td>
+                <td class="value">99% (Free from black seeds/debris)</td>
+              </tr>
+              <tr>
+                <td class="label">Packaging</td>
+                <td class="value">9kg / 10kg Poly bags or customized cartons</td>
+              </tr>
+              <tr>
+                <td class="label">Quality Standards</td>
+                <td class="value">SGS Pre-shipment certification available</td>
+              </tr>
+              <tr>
+                <td class="label">Shelf Life</td>
+                <td class="value">12 Months</td>
+              </tr>
+            </table>
+          </div>
+          <div class="spec-image-box">
+            <div class="spec-image-overlay">
+              <span>Superfood</span>
+              <h4>Gorgon Nut Raw Popped Grade</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Cumin -->
+        <div class="spec-table-container" id="spec-cumin">
+          <div class="spec-table-info">
+            <h3>Machine-Cleaned Cumin Seed Specs</h3>
+            <p>Sourced from Gujarat and Rajasthan. Custom processing for Singapore quality and Europe pesticide levels.</p>
+            <table class="spec-table-data">
+              <tr>
+                <td class="label">Origin</td>
+                <td class="value">India (Gujarat / Rajasthan)</td>
+              </tr>
+              <tr>
+                <td class="label">Purity Percentage</td>
+                <td class="value">99.5% (Sortex Cleaned)</td>
+              </tr>
+              <tr>
+                <td class="label">Moisture Content</td>
+                <td class="value">7.5% - 9% Max</td>
+              </tr>
+              <tr>
+                <td class="label">Extraneous Matter</td>
+                <td class="value">0.5% Maximum</td>
+              </tr>
+              <tr>
+                <td class="label">Pesticide Levels</td>
+                <td class="value">Complies with EU / US EPA Regulations</td>
+              </tr>
+              <tr>
+                <td class="label">Container capacity</td>
+                <td class="value">13.5 Metric Tons per 20ft FCL</td>
+              </tr>
+              <tr>
+                <td class="label">Volatile Oil Content</td>
+                <td class="value">2.0% Min</td>
+              </tr>
+            </table>
+          </div>
+          <div class="spec-image-box">
+            <div class="spec-image-overlay">
+              <span>Exotic Spices</span>
+              <h4>Cuminum Cyminum Premium Seeds</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 4: Sugar -->
+        <div class="spec-table-container" id="spec-sugar">
+          <div class="spec-table-info">
+            <h3>White Crystal Sugar Specs</h3>
+            <p>Refined white crystal sugar, conforming to ICUMSA 45 grade specifications, the international standard for refined sugar.</p>
+            <table class="spec-table-data">
+              <tr>
+                <td class="label">Grade Classification</td>
+                <td class="value">ICUMSA 45 Refined Sugar</td>
+              </tr>
+              <tr>
+                <td class="label">Polarization</td>
+                <td class="value">99.80% Minimum</td>
+              </tr>
+              <tr>
+                <td class="label">Moisture Content</td>
+                <td class="value">0.04% Max</td>
+              </tr>
+              <tr>
+                <td class="label">Color Index</td>
+                <td class="value">45 ICUMSA Max Units</td>
+              </tr>
+              <tr>
+                <td class="label">Solubility</td>
+                <td class="value">100% Dry and Free Flowing</td>
+              </tr>
+              <tr>
+                <td class="label">Radiation</td>
+                <td class="value">Normal Certified</td>
+              </tr>
+              <tr>
+                <td class="label">Container Capacity</td>
+                <td class="value">27 Metric Tons per 20ft Container</td>
+              </tr>
+            </table>
+          </div>
+          <div class="spec-image-box">
+            <div class="spec-image-overlay">
+              <span>Sweetener</span>
+              <h4>Pure Cane ICUMSA 45 Crystals</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS SECTION -->
+  <section class="certs-section section-padding" id="certifications">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-subtitle">Approved Export Quality Credentials</span>
+        <h2 class="section-title">International Certifications</h2>
+      </div>
+
+      <div class="certs-grid">
+        <!-- FSSAI -->
+        <div class="cert-card">
+          <div class="cert-image-wrap">
+            <img src="assets/fssai.jpg" alt="FSSAI" class="cert-img">
+          </div>
+          <h3>Food Safety (FSSAI)</h3>
+          <p>Registered and approved by the Food Safety and Standards Authority of India for global agricultural trade operations.</p>
+        </div>
+        <!-- APEDA -->
+        <div class="cert-card">
+          <div class="cert-image-wrap">
+            <img src="assets/apeda.jpg" alt="APEDA" class="cert-img" style="transform: scale(1.35);">
+          </div>
+          <h3>APEDA Membership</h3>
+          <p>Recognized member of Agricultural and Processed Food Products Export Development Authority of India.</p>
+        </div>
+        <!-- ISO 22000 -->
+        <div class="cert-card">
+          <div class="cert-image-wrap">
+            <img src="assets/iso_22000.jpg" alt="ISO 22000" class="cert-img" style="transform: scale(1.55);">
+          </div>
+          <h3>ISO 22000:2018</h3>
+          <p>Global benchmark certification validating our robust food safety management and hazard mitigation systems.</p>
+        </div>
+        <!-- HACCP -->
+        <div class="cert-card">
+          <div class="cert-image-wrap">
+            <img src="assets/haccp.jpg" alt="HACCP" class="cert-img">
+          </div>
+          <h3>HACCP Compliance</h3>
+          <p>Strict hazard analysis critical control points implemented across processing and bulk containment facilities.</p>
+        </div>
+        <!-- FDA -->
+        <div class="cert-card">
+          <div class="cert-image-wrap">
+            <img src="assets/fda.jpg" alt="FDA" class="cert-img">
+          </div>
+          <h3>FDA Registered</h3>
+          <p>Registered facilities compliant with USA customs rules for biological security and import requirements.</p>
+        </div>
+        <!-- HALAL -->
+        <div class="cert-card">
+          <div class="cert-image-wrap">
+            <img src="assets/halal.jpg" alt="HALAL" class="cert-img">
+          </div>
+          <h3>HALAL Certified</h3>
+          <p>Fully certified in compliance with Islamic dietary codes, enabling smooth imports across Middle Eastern markets.</p>
+        </div>
+        <!-- SPICE BOARD -->
+        <div class="cert-card">
+          <div class="cert-image-wrap">
+            <img src="assets/spices_board.jpg" alt="Spice Board" class="cert-img">
+          </div>
+          <h3>Spice Board Registry</h3>
+          <p>Affiliated directly with the Spices Board of India for spices export verification, grading, and logistics assistance.</p>
+        </div>
+        <!-- SGS Inspection -->
+        <div class="cert-card">
+          <div class="cert-icon">
+            <svg viewBox="0 0 60 60"><path d="M30,10 L45,45 L15,45 Z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h3>SGS Verification</h3>
+          <p>Partnerships with SGS, Intertek, and Geo-Chem to conduct independent analysis of container weight, moisture, and grading.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US SECTION -->
+  <section class="why-section section-padding">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-subtitle">Our Competitive Advantages</span>
+        <h2 class="section-title">Why Exporters Trust Sanover Global Food</h2>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <i class="fa-solid fa-globe why-icon"></i>
+          <h3>Global Export Network</h3>
+          <p>Connecting supply routes from Mumbai, Kandla, and Mundra ports to the largest distribution hubs globally.</p>
+        </div>
+        <div class="why-card">
+          <i class="fa-solid fa-award why-icon"></i>
+          <h3>Premium Quality Products</h3>
+          <p>Rigid sorting processes ensure low broken percentage, clean specs, and premium visual grain quality.</p>
+        </div>
+        <div class="why-card">
+          <i class="fa-solid fa-file-shield why-icon"></i>
+          <h3>International Compliance</h3>
+          <p>Accurate Certificate of Origin (COO), phytosanitary paperwork, and fumigation protocols completed systematically.</p>
+        </div>
+        <div class="why-card">
+          <i class="fa-solid fa-tags why-icon"></i>
+          <h3>Competitive Pricing</h3>
+          <p>Direct sourcing channels from central mills and fields allow us to provide institutional buyers with competitive pricing.</p>
+        </div>
+        <div class="why-card">
+          <i class="fa-solid fa-ship why-icon"></i>
+          <h3>Reliable Shipping</h3>
+          <p>Priority slots with global shipping lines (MSC, Maersk, CMA CGM) ensuring container arrivals stay on schedule.</p>
+        </div>
+        <div class="why-card">
+          <i class="fa-solid fa-headset why-icon"></i>
+          <h3>Dedicated Support</h3>
+          <p>24/7 dedicated account managers communicating trade updates, vessel bookings, and customs checks.</p>
+        </div>
+        <div class="why-card">
+          <i class="fa-solid fa-hourglass-half why-icon"></i>
+          <h3>Timely Delivery</h3>
+          <p>Optimized freight management ensures lead times are kept to a minimum from cargo container loading to destination port.</p>
+        </div>
+        <div class="why-card">
+          <i class="fa-solid fa-shield-halved why-icon"></i>
+          <h3>Secure Documentation</h3>
+          <p>Swift, verified bank transactions, letter of credit (L/C) compliance, and smooth bill of lading handling.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GLOBAL PRESENCE INTERACTIVE MAP SECTION -->
+  <section class="presence-section section-padding">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-subtitle">Sanover Markets & Import Corridors</span>
+        <h2 class="section-title">Our Global Footprint</h2>
+      </div>
+
+      <div class="region-badges">
+        <button class="region-badge active" data-region="middleEast">Middle East (GCC)</button>
+        <button class="region-badge" data-region="europe">Europe</button>
+        <button class="region-badge" data-region="usa">USA</button>
+        <button class="region-badge" data-region="canada">Canada</button>
+        <button class="region-badge" data-region="australia">Australia</button>
+        <button class="region-badge" data-region="africa">Africa</button>
+        <button class="region-badge" data-region="southeastAsia">Southeast Asia</button>
+      </div>
+
+      <div class="about-map-container" style="height: 500px; margin: 0 auto; max-width: 1100px; overflow: hidden; border-radius: 8px; border: 1px solid var(--glass-border); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+        <img src="assets/world_map.png" alt="World Trade Footprints Map" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.85;">
+      </div>
+      
+      <p class="map-interaction-helper">
+        * Select any region above or click the badges to automatically rotate the 3D trade globe and highlight the <span>Sanover Export Corridor</span>.
+      </p>
+    </div>
+  </section>
+
+  <!-- EXPORT PROCESS TIMELINE SECTION -->
+  <section class="process-section section-padding">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-subtitle">Efficient step-by-step supply flow</span>
+        <h2 class="section-title">Our Export Execution Process</h2>
+      </div>
+
+      <div class="timeline-container">
+        <!-- Step 1 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-num">Step 01</span>
+            <h3>Inquiry Received</h3>
+            <p>Buyer submits request detailing grades, target pricing, quantities, packaging specs, and destination port (CIF/FOB).</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-num">Step 02</span>
+            <h3>Quotation Submission</h3>
+            <p>Sanover sends formal Proforma Invoice and commercial pricing proposals matching dynamic market rates.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-num">Step 03</span>
+            <h3>Sample Approval</h3>
+            <p>We dispatch physical air-freight samples for lab testing and buyer sensory evaluation prior to contract sealing.</p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-num">Step 04</span>
+            <h3>Contract Execution</h3>
+            <p>Signing of export agreement and setting up payment methods (LC at sight / advanced wire transfer).</p>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-num">Step 05</span>
+            <h3>Production & Processing</h3>
+            <p>Sourcing raw batches, cleaning, milling, Sortex grading, and packaging in our ISO certified facilities.</p>
+          </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-num">Step 06</span>
+            <h3>Third-Party Inspection</h3>
+            <p>Independent surveyors (SGS/Geo-Chem) extract random samples to verify weight, grading, and moisture benchmarks.</p>
+          </div>
+        </div>
+
+        <!-- Step 7 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-num">Step 07</span>
+            <h3>Documentation</h3>
+            <p>Compilation of Bill of Lading, Phytosanitary, fumigation certificates, certificate of origin, and custom clear paperworks.</p>
+          </div>
+        </div>
+
+        <!-- Step 8 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-num">Step 08</span>
+            <h3>Port Shipment</h3>
+            <p>Loading cargo containers onto vessels at maritime shipping ports (Kandla / Mundra / JNPT) for transit.</p>
+          </div>
+        </div>
+
+        <!-- Step 9 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-num">Step 09</span>
+            <h3>Delivery & Tracking</h3>
+            <p>Vessel reaches destination. Buyer clears customs using dispatched original document sets and takes cargo custody.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENT FEEDBACK / TESTIMONIALS SECTION -->
+  <section class="feedback-section section-padding" id="testimonials">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-subtitle">Verified Buyer Reviews</span>
+        <h2 class="section-title">Client Feedback & Testimonials</h2>
+      </div>
+      <div class="feedback-grid" id="feedback-display-container">
+        <!-- Dynamic reviews injected here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT & INQUIRY SECTION -->
+  <section class="contact-section section-padding" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info-wrap">
+          <div>
+            <span class="section-subtitle">Request A Commercial Quotation</span>
+            <h2 class="section-title">Partner With Sanover</h2>
+            <p style="margin-top: 1.5rem;">
+              Have questions regarding grades, logistics capacities, or custom packaging options? Our export sales specialists are standing by to create detailed proposals.
+            </p>
+          </div>
+
+          <div class="contact-info-box">
+            <div class="contact-info-icon">
+              <i class="fa-solid fa-map-location-dot"></i>
+            </div>
+            <div class="contact-info-details">
+              <h4>Registered Corporate Office</h4>
+              <p>Sanover Global Food Pvt Ltd, UTTAR PRADESH, INDIA</p>
+            </div>
+          </div>
+
+          <div class="contact-info-box">
+            <div class="contact-info-icon">
+              <i class="fa-solid fa-envelope-open-text"></i>
+            </div>
+            <div class="contact-info-details">
+              <h4>Trading Desk Email</h4>
+              <p><a href="mailto:sanoverglobalfood@gmail.com">sanoverglobalfood@gmail.com</a></p>
+            </div>
+          </div>
+
+          <div class="contact-info-box">
+            <div class="contact-info-icon">
+              <i class="fa-solid fa-phone-volume"></i>
+            </div>
+            <div class="contact-info-details">
+              <h4>Direct Hotline / WhatsApp</h4>
+              <p><a href="https://wa.me/917906808962" target="_blank">+91 79068 08962</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap">
+          <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="5964c460-1fb4-408f-af68-eb0af85b25ab">
+            <input type="hidden" name="from_name" value="Sanover Global Food">
+            <input type="hidden" name="subject" value="New Website Inquiry - Sanover Global Food">
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label" for="contactName">Contact Name *</label>
+                <input class="form-input" type="text" id="contactName" name="name" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contactCompany">Company Name *</label>
+                <input class="form-input" type="text" id="contactCompany" name="company" placeholder="Global Imports Ltd" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contactCountry">Country *</label>
+                <input class="form-input" type="text" id="contactCountry" name="country" placeholder="United Arab Emirates" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contactEmail">Business Email *</label>
+                <input class="form-input" type="email" id="contactEmail" name="email" placeholder="imports@company.com" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contactPhone">Phone / WhatsApp Number</label>
+                <input class="form-input" type="tel" id="contactPhone" name="phone" placeholder="+971 50 123 4567">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contactProduct">Product Interested In *</label>
+                <select class="form-input" id="contactProduct" name="product" required style="background-color: var(--secondary-dark); cursor: pointer;">
+                  <option value="">-- Choose Commodity --</option>
+                  <option value="Basmati Rice">Premium Basmati Rice</option>
+                  <option value="Non-Basmati Rice">Non-Basmati / IR64 Rice</option>
+                  <option value="Foxnuts (Makhana)">Foxnuts (Makhana)</option>
+                  <option value="Cumin Seeds">Cumin Seeds</option>
+                  <option value="Refined Sugar">ICUMSA 45 White Sugar</option>
+                </select>
+              </div>
+              <div class="form-group form-group-full">
+                <label class="form-label" for="contactMsg">Inquiry Details & Required Tonnage *</label>
+                <textarea class="form-textarea" id="contactMsg" name="message" placeholder="Provide specs requirement, packing type, destination port CIF details, target shipment date..." required></textarea>
+              </div>
+            </div>
+            <div class="form-buttons">
+              <button class="btn btn-gold contact-form-btn" type="submit">Send Inquiry</button>
+              <button class="btn btn-secondary contact-form-btn" type="reset">Reset Fields</button>
+            </div>
+          </form>
+          
+          <div class="success-msg">
+            <i class="fa-solid fa-circle-check"></i>
+            <h3>Inquiry Submitted Successfully</h3>
+            <p>Thank you for contacting Sanover Global Food. Our trade specialists have received your inquiry. A formal quote draft will be sent to your business email within 24 hours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUPPORT CENTER SECTION -->
+  <section class="support-section section-padding" id="support">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-subtitle">Direct Trade Desk Hotline</span>
+        <h2 class="section-title">24/7 Global Trade Support</h2>
+      </div>
+
+      <div class="support-grid">
+        <div class="support-card">
+          <h3><i class="fa-solid fa-circle-info"></i> Export Assistance</h3>
+          <p>Get immediate help regarding letter of credit requirements, custom certificates, invoice structures, and payment options.</p>
+        </div>
+        <div class="support-card" onclick="window.location.href='samples.html'" style="cursor: pointer;">
+          <h3><i class="fa-solid fa-boxes-packing"></i> Sample Requests</h3>
+          <p>Quick processing of trade sample requests. We dispatch certified physical grains via DHL express services.</p>
+          <a href="samples.html" class="btn btn-outline-gold" style="margin-top: 1rem; width: 100%; text-align: center; display: inline-block;">Request Samples</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="margin-bottom: 1.5rem;">
+            <img src="assets/logo.png" alt="Sanover Global Food" class="footer-logo-img">
+            <span class="logo-text">
+              <span class="logo-title">SANOVER</span>
+              <span class="logo-subtitle">GLOBAL FOOD</span>
+            </span>
+          </a>
+          <p>Trusted globally. Sourcing premium agricultural commodities directly from Indian fields and delivering with shipping efficiency.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Menu Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact Desk</a></li>
+            <li><a href="#support">Support Center</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Product Lines</h4>
+          <ul class="footer-links">
+            <li><a href="rice.html">Premium Basmati Rice</a></li>
+            <li><a href="makhana.html">Foxnuts (Makhana)</a></li>
+            <li><a href="cumin.html">Cumin Seeds</a></li>
+            <li><a href="sugar.html">White Crystal Sugar</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <ul class="footer-links">
+            <li style="color: var(--slate-grey); font-size: 0.95rem;">
+              <i class="fa-solid fa-location-dot text-gold" style="margin-right: 8px;"></i> Corporate Office, UTTAR PRADESH, INDIA
+            </li>
+            <li style="color: var(--slate-grey); font-size: 0.95rem;">
+              <i class="fa-solid fa-phone text-gold" style="margin-right: 8px;"></i> <a href="https://wa.me/917906808962" target="_blank">+91 79068 08962</a>
+            </li>
+            <li style="color: var(--slate-grey); font-size: 0.95rem;">
+              <i class="fa-solid fa-envelope text-gold" style="margin-right: 8px;"></i> <a href="mailto:sanoverglobalfood@gmail.com">sanoverglobalfood@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Sanover Global Food Pvt Ltd. All Rights Reserved.</p>
+        <ul class="footer-legal-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- REQUEST QUOTE OVERLAY MODAL -->
+  <div class="modal" id="quoteModal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Request Global Quote</h3>
+        <button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <form class="modal-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="5964c460-1fb4-408f-af68-eb0af85b25ab">
+          <input type="hidden" name="from_name" value="Sanover Global Food">
+          <input type="hidden" name="subject" value="New Quote Request - Sanover Global Food">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="modalName">Your Name *</label>
+              <input class="form-input" type="text" id="modalName" name="name" placeholder="Full Name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="modalCompany">Company Name *</label>
+              <input class="form-input" type="text" id="modalCompany" name="company" placeholder="Global Buying House" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="modalCountry">Target Country *</label>
+              <input class="form-input" type="text" id="modalCountry" name="country" placeholder="Saudi Arabia" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="modalEmail">Business Email *</label>
+              <input class="form-input" type="email" id="modalEmail" name="email" placeholder="buyer@tradehouse.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="modalPhone">WhatsApp / Mobile *</label>
+              <input class="form-input" type="tel" id="modalPhone" name="phone" placeholder="+966 50 123 4567" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="modalCommodity">Product Line *</label>
+              <select class="form-input" id="modalCommodity" name="product" required style="background-color: var(--primary-dark);">
+                <option value="">-- Choose Product --</option>
+                <option value="Basmati Rice">Premium Basmati Rice</option>
+                <option value="Foxnuts (Makhana)">Foxnuts (Makhana)</option>
+                <option value="Cumin Seeds">Cumin Seeds</option>
+                <option value="Refined Sugar">ICUMSA 45 White Sugar</option>
+              </select>
+            </div>
+            <div class="form-group form-group-full">
+              <label class="form-label" for="modalSpecDetails">Tonnage, Sizing & Port Details *</label>
+              <textarea class="form-textarea" id="modalSpecDetails" name="message" placeholder="Detail standard compliance levels, packing weight specifications, shipping timeline, CIF destination details..." required></textarea>
+            </div>
+          </div>
+          <button class="btn btn-gold" type="submit" style="width: 100%; margin-top: 1rem;">Submit Quotation Request</button>
+        </form>
+
+        <div class="success-msg">
+          <i class="fa-solid fa-envelope-circle-check"></i>
+          <h3>Commercial Quote Initiated</h3>
+          <p>Thank you for submitting your quote request. A trading manager has been assigned. We will send the pricing estimation sheet and freight delivery times to your email shortly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CDN dependencies (Three.js & GSAP) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <!-- Custom Scripts -->
+  <script src="main.js"></script>
+  <script src="hero3d.js"></script>
+  <!-- <script src="map3d.js"></script> -->
+  <script src="products3d.js"></script>
+</body>
+</html>
