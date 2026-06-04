@@ -1,6 +1,27 @@
 // Main JS Logic for Sanover Global Food Pvt Ltd Website
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Load Web3Forms key from .env file if available
+  let web3formsKey = '5964c460-1fb4-408f-af68-eb0af85b25ab'; // Fallback key
+  fetch('.env')
+    .then(response => {
+      if (!response.ok) throw new Error('No .env file');
+      return response.text();
+    })
+    .then(text => {
+      const match = text.match(/WEB3FORMS_ACCESS_KEY\s*=\s*([^\s#]+)/);
+      if (match && match[1]) {
+        web3formsKey = match[1].replace(/['"]/g, '').trim();
+        // Update all form inputs dynamically
+        document.querySelectorAll('input[name="access_key"]').forEach(input => {
+          input.value = web3formsKey;
+        });
+      }
+    })
+    .catch(() => {
+      // Graceful fallback to default key
+    });
+
   // 1. Sticky Header
   const header = document.querySelector('header');
   window.addEventListener('scroll', () => {
@@ -160,8 +181,8 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
 
-        // Add Web3Forms access key
-        formData['access_key'] = '5964c460-1fb4-408f-af68-eb0af85b25ab';
+        // Add Web3Forms access key from form or variable fallback
+        formData['access_key'] = form.querySelector('input[name="access_key"]')?.value || web3formsKey;
 
         // Submit form data to Web3Forms
         fetch('https://api.web3forms.com/submit', {
