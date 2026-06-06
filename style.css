@@ -1347,7 +1347,7 @@ header.sticky .logo-subtitle {
 
 .origin-pulse {
   fill: rgba(212, 175, 55, 0.4);
-  transform-origin: 705px 475px;
+  transform-origin: 685px 475px;
   animation: map-pulse 2s infinite ease-out;
 }
 
