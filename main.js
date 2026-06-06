@@ -253,17 +253,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 7. Interactive Trade Route Highlighting badges (Home Page)
   const regionBadges = document.querySelectorAll('.region-badge');
+  const routeGroups = document.querySelectorAll('.map-route-group');
+
   regionBadges.forEach(badge => {
     badge.addEventListener('click', () => {
       regionBadges.forEach(b => b.classList.remove('active'));
       badge.classList.add('active');
 
       const targetRegion = badge.getAttribute('data-region');
-      // Dispatch an event to notify Map3D to focus on the selected region
+
+      // First, remove active class from all groups to fade them out and reset animation
+      routeGroups.forEach(group => {
+        group.classList.remove('active');
+      });
+
+      // Use a minimal timeout to let the DOM update, resetting the path-drawing animations
+      setTimeout(() => {
+        if (targetRegion === 'all') {
+          routeGroups.forEach(group => {
+            group.classList.add('active');
+          });
+        } else {
+          const matchingGroup = document.querySelector(`.map-route-group[data-region="${targetRegion}"]`);
+          if (matchingGroup) {
+            matchingGroup.classList.add('active');
+          }
+        }
+      }, 10);
+
+      // Dispatch an event to notify Map3D to focus on the selected region (in case it's re-enabled)
       const event = new CustomEvent('focus-region', { detail: { region: targetRegion } });
       window.dispatchEvent(event);
     });
   });
+
 
   // 8. Initialize GSAP ScrollTrigger Animations if libraries loaded
   if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {

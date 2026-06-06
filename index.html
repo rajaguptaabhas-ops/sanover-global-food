@@ -563,17 +563,199 @@
       </div>
 
       <div class="region-badges">
-        <button class="region-badge active" data-region="middleEast">Middle East (GCC)</button>
-        <button class="region-badge" data-region="europe">Europe</button>
+        <button class="region-badge active" data-region="all">Global View</button>
+        <button class="region-badge" data-region="middleEast">Middle East (GCC)</button>
+        <button class="region-badge" data-region="europe">Europe & Russia</button>
         <button class="region-badge" data-region="usa">USA</button>
         <button class="region-badge" data-region="canada">Canada</button>
         <button class="region-badge" data-region="australia">Australia</button>
         <button class="region-badge" data-region="africa">Africa</button>
-        <button class="region-badge" data-region="southeastAsia">Southeast Asia</button>
+        <button class="region-badge" data-region="southeastAsia">East & SE Asia</button>
       </div>
 
-      <div class="about-map-container" style="height: 500px; margin: 0 auto; max-width: 1100px; overflow: hidden; border-radius: 8px; border: 1px solid var(--glass-border); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-        <img src="assets/world_map.png" alt="World Trade Footprints Map" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.85;">
+      <div class="about-map-container" id="about-map-container">
+        <svg class="map-interactive-svg" viewBox="0 0 1024 1024" preserveAspectRatio="xMidYMid slice">
+          <!-- Glow Filter Definitions -->
+          <defs>
+            <filter id="glow-gold" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur1" />
+              <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur2" />
+              <feMerge>
+                <feMergeNode in="blur2" />
+                <feMergeNode in="blur1" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+            <filter id="glow-dot" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+
+          <!-- Clean Map Image -->
+          <image href="assets/world_map_clean.png" x="0" y="0" width="1024" height="1024" opacity="0.85" />
+
+          <!-- Trade Hub Origin (India) -->
+          <g class="map-origin-group">
+            <circle class="origin-pulse" cx="705" cy="475" r="12" />
+            <circle class="origin-dot" cx="705" cy="475" r="6" />
+            <text class="origin-label" x="705" y="455" text-anchor="middle">India (HQ)</text>
+          </g>
+
+          <!-- Middle East GCC -->
+          <g class="map-route-group active" data-region="middleEast">
+            <!-- Dubai -->
+            <path class="trade-route" d="M 705 475 Q 660 425 615 455" />
+            <circle class="dest-dot" cx="615" cy="455" r="4.5" />
+            <text class="dest-label" x="615" y="445" text-anchor="middle">Dubai</text>
+
+            <!-- Riyadh -->
+            <path class="trade-route" d="M 705 475 Q 650 430 595 465" />
+            <circle class="dest-dot" cx="595" cy="465" r="4.5" />
+            <text class="dest-label" x="595" y="490" text-anchor="middle">Riyadh</text>
+
+            <!-- Jeddah -->
+            <path class="trade-route" d="M 705 475 Q 640 435 575 480" />
+            <circle class="dest-dot" cx="575" cy="480" r="4" />
+            <text class="dest-label" x="555" y="485" text-anchor="end">Jeddah</text>
+          </g>
+
+          <!-- Europe & Russia -->
+          <g class="map-route-group active" data-region="europe">
+            <!-- Rotterdam -->
+            <path class="trade-route" d="M 705 475 Q 600 310 500 310" />
+            <circle class="dest-dot" cx="500" cy="310" r="4.5" />
+            <text class="dest-label" x="500" y="300" text-anchor="middle">Rotterdam</text>
+
+            <!-- Hamburg -->
+            <path class="trade-route" d="M 705 475 Q 610 310 515 305" />
+            <circle class="dest-dot" cx="515" cy="305" r="4" />
+            <text class="dest-label" x="530" y="295" text-anchor="start">Hamburg</text>
+
+            <!-- London -->
+            <path class="trade-route" d="M 705 475 Q 590 300 485 310" />
+            <circle class="dest-dot" cx="485" cy="310" r="4" />
+            <text class="dest-label" x="470" y="305" text-anchor="end">London</text>
+
+            <!-- St. Petersburg -->
+            <path class="trade-route" d="M 705 475 Q 640 280 600 170" />
+            <circle class="dest-dot" cx="600" cy="170" r="4.5" />
+            <text class="dest-label" x="600" y="160" text-anchor="middle">St. Petersburg</text>
+
+            <!-- Vladivostok -->
+            <path class="trade-route" d="M 705 475 Q 810 320 885 265" />
+            <circle class="dest-dot" cx="885" cy="265" r="4.5" />
+            <text class="dest-label" x="885" y="255" text-anchor="middle">Vladivostok</text>
+          </g>
+
+          <!-- USA -->
+          <g class="map-route-group active" data-region="usa">
+            <!-- New York -->
+            <path class="trade-route" d="M 705 475 Q 500 280 295 370" />
+            <circle class="dest-dot" cx="295" cy="370" r="4.5" />
+            <text class="dest-label" x="295" y="360" text-anchor="middle">New York</text>
+
+            <!-- Los Angeles -->
+            <path class="trade-route" d="M 705 475 Q 427 220 150 410" />
+            <circle class="dest-dot" cx="150" cy="410" r="4.5" />
+            <text class="dest-label" x="140" y="425" text-anchor="end">Los Angeles</text>
+
+            <!-- Seattle -->
+            <path class="trade-route" d="M 705 475 Q 425 180 145 340" />
+            <circle class="dest-dot" cx="145" cy="340" r="4" />
+            <text class="dest-label" x="135" y="335" text-anchor="end">Seattle</text>
+
+            <!-- Houston -->
+            <path class="trade-route" d="M 705 475 Q 465 280 230 430" />
+            <circle class="dest-dot" cx="230" cy="430" r="4" />
+            <text class="dest-label" x="230" y="445" text-anchor="middle">Houston</text>
+          </g>
+
+          <!-- Canada -->
+          <g class="map-route-group active" data-region="canada">
+            <!-- Vancouver -->
+            <path class="trade-route" d="M 705 475 Q 427 160 150 310" />
+            <circle class="dest-dot" cx="150" cy="310" r="4.5" />
+            <text class="dest-label" x="140" y="300" text-anchor="end">Vancouver</text>
+
+            <!-- Montreal -->
+            <path class="trade-route" d="M 705 475 Q 495 240 285 340" />
+            <circle class="dest-dot" cx="285" cy="340" r="4.5" />
+            <text class="dest-label" x="285" y="330" text-anchor="middle">Montreal</text>
+
+            <!-- Halifax -->
+            <path class="trade-route" d="M 705 475 Q 505 250 305 350" />
+            <circle class="dest-dot" cx="305" cy="350" r="4" />
+            <text class="dest-label" x="320" y="355" text-anchor="start">Halifax</text>
+          </g>
+
+          <!-- Australia -->
+          <g class="map-route-group active" data-region="australia">
+            <!-- Sydney -->
+            <path class="trade-route" d="M 705 475 Q 850 600 915 780" />
+            <circle class="dest-dot" cx="915" cy="780" r="4.5" />
+            <text class="dest-label" x="930" y="785" text-anchor="start">Sydney</text>
+
+            <!-- Melbourne -->
+            <path class="trade-route" d="M 705 475 Q 820 620 890 800" />
+            <circle class="dest-dot" cx="890" cy="800" r="4" />
+            <text class="dest-label" x="890" y="815" text-anchor="middle">Melbourne</text>
+
+            <!-- Perth -->
+            <path class="trade-route" d="M 705 475 Q 770 630 810 750" />
+            <circle class="dest-dot" cx="810" cy="750" r="4" />
+            <text class="dest-label" x="795" y="755" text-anchor="end">Perth</text>
+          </g>
+
+          <!-- Africa -->
+          <g class="map-route-group active" data-region="africa">
+            <!-- Mombasa -->
+            <path class="trade-route" d="M 705 475 Q 630 540 575 585" />
+            <circle class="dest-dot" cx="575" cy="585" r="4.5" />
+            <text class="dest-label" x="560" y="585" text-anchor="end">Mombasa</text>
+
+            <!-- Durban -->
+            <path class="trade-route" d="M 705 475 Q 610 620 565 720" />
+            <circle class="dest-dot" cx="565" cy="720" r="4.5" />
+            <text class="dest-label" x="550" y="725" text-anchor="end">Durban</text>
+
+            <!-- Lagos -->
+            <path class="trade-route" d="M 705 475 Q 560 520 480 565" />
+            <circle class="dest-dot" cx="480" cy="565" r="4" />
+            <text class="dest-label" x="465" y="565" text-anchor="end">Lagos</text>
+          </g>
+
+          <!-- Southeast Asia -->
+          <g class="map-route-group active" data-region="southeastAsia">
+            <!-- Singapore -->
+            <path class="trade-route" d="M 705 475 Q 740 520 765 565" />
+            <circle class="dest-dot" cx="765" cy="565" r="4.5" />
+            <text class="dest-label" x="780" y="575" text-anchor="start">Singapore</text>
+
+            <!-- Bangkok -->
+            <path class="trade-route" d="M 705 475 Q 740 485 770 515" />
+            <circle class="dest-dot" cx="770" cy="515" r="4" />
+            <text class="dest-label" x="785" y="510" text-anchor="start">Bangkok</text>
+
+            <!-- Ho Chi Minh -->
+            <path class="trade-route" d="M 705 475 Q 750 495 785 530" />
+            <circle class="dest-dot" cx="785" cy="530" r="4" />
+            <text class="dest-label" x="800" y="535" text-anchor="start">Ho Chi Minh</text>
+
+            <!-- Manila -->
+            <path class="trade-route" d="M 705 475 Q 770 495 820 525" />
+            <circle class="dest-dot" cx="820" cy="525" r="4" />
+            <text class="dest-label" x="835" y="525" text-anchor="start">Manila</text>
+
+            <!-- Tokyo -->
+            <path class="trade-route" d="M 705 475 Q 830 350 910 310" />
+            <circle class="dest-dot" cx="910" cy="310" r="4.5" />
+            <text class="dest-label" x="910" y="300" text-anchor="middle">Tokyo</text>
+          </g>
+        </svg>
       </div>
       
       <p class="map-interaction-helper">

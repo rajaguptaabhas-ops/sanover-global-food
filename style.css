@@ -1266,6 +1266,141 @@ header.sticky .logo-subtitle {
   box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
 }
 
+/* Interactive SVG World Map Container & Overlay */
+.about-map-container {
+  position: relative;
+  height: 500px;
+  margin: 0 auto;
+  max-width: 1100px;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  background-color: #07162c;
+  z-index: 5;
+}
+
+.map-interactive-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Base styling for paths and dots */
+.trade-route {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 2.2px;
+  stroke-linecap: round;
+  filter: url(#glow-gold);
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+}
+
+/* Dot endpoints */
+.dest-dot {
+  fill: var(--gold);
+  stroke: #ffffff;
+  stroke-width: 1.2px;
+  filter: url(#glow-dot);
+  transition: opacity 0.3s ease, transform 0.2s ease, fill 0.2s ease;
+  transform-origin: center;
+  cursor: pointer;
+}
+
+.dest-dot:hover {
+  transform: scale(1.4);
+  fill: #ffffff;
+}
+
+/* Label tags */
+.dest-label {
+  fill: var(--slate-grey);
+  font-size: 11px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  opacity: 0;
+  transition: opacity 0.3s ease, fill 0.2s ease;
+  pointer-events: none;
+}
+
+/* Show labels when parent group is active */
+.map-route-group.active .dest-label {
+  opacity: 0.85;
+}
+
+.map-route-group:hover .dest-label {
+  fill: var(--white);
+  opacity: 1 !important;
+}
+
+/* Pulse origin (India) styling */
+.origin-dot {
+  fill: #ffffff;
+  stroke: var(--gold);
+  stroke-width: 2px;
+  filter: url(#glow-dot);
+}
+
+.origin-pulse {
+  fill: rgba(212, 175, 55, 0.4);
+  transform-origin: 705px 475px;
+  animation: map-pulse 2s infinite ease-out;
+}
+
+.origin-label {
+  fill: var(--white);
+  font-size: 11px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8));
+}
+
+/* Pulse animation */
+@keyframes map-pulse {
+  0% {
+    r: 6;
+    opacity: 1;
+  }
+  100% {
+    r: 25;
+    opacity: 0;
+  }
+}
+
+/* Visibility toggling by state */
+.map-route-group {
+  opacity: 0; /* Hide inactive routes completely */
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+/* When group has active class, show it fully */
+.map-route-group.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Draw path animation on hover/activation */
+.map-route-group.active .trade-route {
+  animation: draw-route 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes draw-route {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
 /* Export Process Timeline */
 /* Export Process Timeline */
 .process-section {
