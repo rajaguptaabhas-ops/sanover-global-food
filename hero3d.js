@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!canvas) return;
 
   const context = canvas.getContext("2d");
-  const frameCount = 164;
+  const frameCount = 206;
 
   // Generate file paths
   const currentFrame = index => `assets/hero-frames/ezgif-frame-${index.toString().padStart(3, '0')}.jpg`;
