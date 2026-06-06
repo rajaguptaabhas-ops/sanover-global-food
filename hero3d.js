@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const frameCount = 206;
 
   // Generate file paths
-  const currentFrame = index => `assets/hero-frames/ezgif-frame-${index.toString().padStart(3, '0')}.jpg`;
+  const currentFrame = index => `assets/hero-frames/ezgif-frame-${index.toString().padStart(3, '0')}.jpg?v=2.0`;
 
   // Preload Images
   const images = [];
