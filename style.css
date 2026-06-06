@@ -1267,126 +1267,49 @@ header.sticky .logo-subtitle {
 }
 
 /* Export Process Timeline */
+/* Export Process Timeline */
 .process-section {
   background: var(--primary-dark);
 }
 
-.process-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 4rem;
-  align-items: start;
-}
-
-.process-showcase {
-  position: sticky;
-  top: 120px;
-  z-index: 10;
-}
-
-.container-showcase-card {
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: 8px;
-  padding: 2.5rem;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
-  position: relative;
-}
-
-.container-card-header {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  padding-bottom: 1.25rem;
-  margin-bottom: 1.5rem;
-  font-family: monospace;
-  font-size: 0.8rem;
-}
-
-.container-id {
-  color: var(--gold);
-  font-weight: bold;
-}
-
-.container-seal-status {
-  color: #10b981; /* Green */
-}
-
-.container-showcase-img {
-  width: 100%;
-  border-radius: 4px;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-  transition: var(--transition-smooth);
-}
-
-.container-showcase-img:hover {
-  transform: scale(1.02);
-}
-
-.container-spec-sheet h4 {
-  font-size: 1rem;
-  color: var(--white);
-  margin-bottom: 1rem;
-  letter-spacing: 1px;
-}
-
-.spec-row {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
-  padding: 0.6rem 0;
-  font-size: 0.9rem;
-}
-
-.spec-row:last-child {
-  border-bottom: none;
-}
-
-.spec-label {
-  color: var(--slate-grey);
-}
-
-.spec-val {
-  color: var(--white);
-  font-weight: bold;
-}
-
-/* Timeline steppers */
 .timeline-container {
   position: relative;
-  max-width: 100%;
-  padding: 1rem 0;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 0;
 }
 
-.process-timeline .timeline-container {
-  padding-left: 20px;
-}
-
-.process-timeline .timeline-container::before {
+.timeline-container::before {
   content: '';
   position: absolute;
-  left: 20px;
+  left: 50%;
   top: 0;
   bottom: 0;
   width: 2px;
   background: linear-gradient(to bottom, var(--glass-border) 0%, var(--gold) 50%, var(--glass-border) 100%);
+  transform: translateX(-50%);
 }
 
-.process-timeline .timeline-item {
+.timeline-item {
   position: relative;
-  width: 100% !important;
-  left: 0 !important;
-  text-align: left !important;
-  padding: 1.5rem 1.5rem 1.5rem 3.5rem !important;
+  width: 50%;
+  padding: 2rem 3rem;
   box-sizing: border-box;
 }
 
-.process-timeline .timeline-dot {
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-dot {
   position: absolute;
-  top: 2.25rem !important;
-  left: 12px !important;
-  right: auto !important;
+  top: 2.75rem;
   width: 16px;
   height: 16px;
   background: var(--primary-dark);
@@ -1397,13 +1320,24 @@ header.sticky .logo-subtitle {
   transition: var(--transition-fast);
 }
 
-.process-timeline .timeline-item:hover .timeline-dot {
+.timeline-item:nth-child(odd) .timeline-dot {
+  right: -8px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+  left: -8px;
+}
+
+.timeline-item:hover .timeline-dot {
   background: var(--gold);
-  transform: scale(1.3) !important;
+  transform: scale(1.3) translateX(-50%);
+}
+.timeline-item:nth-child(odd):hover .timeline-dot {
+  transform: scale(1.3) translateX(50%);
 }
 
 /* Corrugated Cargo Container styling */
-.process-timeline .timeline-content {
+.timeline-content {
   background: repeating-linear-gradient(
     90deg,
     #0c1b33 0px,
@@ -1414,31 +1348,45 @@ header.sticky .logo-subtitle {
   );
   border: 2px solid #1e3a5f;
   border-radius: 4px;
-  padding: 1.75rem 2.2rem 1.75rem 2.5rem;
   position: relative;
   overflow: hidden;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
   transition: var(--transition-smooth);
 }
 
-/* Vertical locking rod on container door edge */
-.process-timeline .timeline-content::before {
+/* Extra padding on the rod-side for content */
+.timeline-item:nth-child(odd) .timeline-content {
+  padding: 1.75rem 2.5rem 1.75rem 2.2rem;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  padding: 1.75rem 2.2rem 1.75rem 2.5rem;
+}
+
+/* Vertical locking rod on container door edge - facing the center line */
+.timeline-content::before {
   content: '';
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 16px;
   width: 4px;
   background: linear-gradient(90deg, #b8860b 0%, #d4af37 50%, #aa7c11 100%);
   z-index: 5;
   box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 
+.timeline-item:nth-child(odd) .timeline-content::before {
+  right: 16px;
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+  left: 16px;
+}
+
 /* Hinges on locking rod */
-.process-timeline .timeline-content-hinges {
+.timeline-content-hinges {
   position: absolute;
   top: 20%;
-  left: 12px;
   width: 12px;
   height: 6px;
   background: #aa7c11;
@@ -1447,7 +1395,15 @@ header.sticky .logo-subtitle {
   z-index: 6;
 }
 
-.process-timeline .timeline-content-hinges::before {
+.timeline-item:nth-child(odd) .timeline-content-hinges {
+  right: 12px;
+}
+
+.timeline-item:nth-child(even) .timeline-content-hinges {
+  left: 12px;
+}
+
+.timeline-content-hinges::before {
   content: '';
   position: absolute;
   top: 35px;
@@ -1459,7 +1415,7 @@ header.sticky .logo-subtitle {
   border-radius: 1px;
 }
 
-.process-timeline .timeline-content-hinges::after {
+.timeline-content-hinges::after {
   content: '';
   position: absolute;
   top: 70px;
@@ -1472,16 +1428,23 @@ header.sticky .logo-subtitle {
 }
 
 /* Stenciled labels and markings */
-.process-timeline .timeline-content::after {
+.timeline-content::after {
   content: 'SANOVER COM. LOGISTICS';
   position: absolute;
   bottom: 6px;
-  right: 12px;
   font-family: monospace;
   font-size: 0.65rem;
   font-weight: bold;
   letter-spacing: 1px;
   color: rgba(212, 175, 55, 0.2);
+}
+
+.timeline-item:nth-child(odd) .timeline-content::after {
+  left: 12px;
+}
+
+.timeline-item:nth-child(even) .timeline-content::after {
+  right: 12px;
 }
 
 .container-stencil-code {
@@ -1499,7 +1462,7 @@ header.sticky .logo-subtitle {
   text-transform: uppercase;
 }
 
-.process-timeline .timeline-num {
+.timeline-num {
   font-family: var(--font-heading);
   font-size: 1.25rem;
   color: var(--gold);
@@ -1508,37 +1471,71 @@ header.sticky .logo-subtitle {
   display: block;
 }
 
-.process-timeline .timeline-content h3 {
+.timeline-content h3 {
   font-size: 1.35rem;
   margin-bottom: 0.75rem;
   color: var(--white);
 }
 
-.process-timeline .timeline-content p {
+.timeline-content p {
   font-size: 0.9rem;
   color: var(--slate-grey);
 }
 
-.process-timeline .timeline-content:hover {
+.timeline-content:hover {
   border-color: var(--gold);
   box-shadow: 0 15px 35px rgba(212, 175, 55, 0.25);
   transform: translateY(-4px);
 }
 
-.process-timeline .timeline-content:hover::after {
+.timeline-content:hover::after {
   color: rgba(212, 175, 55, 0.4);
 }
 
-@media (max-width: 992px) {
-  .process-grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+/* Responsive adjustments for alternating timeline */
+@media (max-width: 768px) {
+  .timeline-container::before {
+    left: 20px;
+    transform: none;
   }
-  .process-showcase {
-    position: relative;
-    top: 0;
+
+  .timeline-item {
+    width: 100% !important;
+    left: 0 !important;
+    text-align: left !important;
+    padding: 1.5rem 1.5rem 1.5rem 3.5rem !important;
+  }
+
+  .timeline-dot {
+    left: 12px !important;
+    right: auto !important;
+    top: 2.25rem !important;
+  }
+
+  .timeline-item:hover .timeline-dot {
+    transform: scale(1.3) !important;
+  }
+  
+  .timeline-item .timeline-content {
+    padding: 1.75rem 2.2rem 1.75rem 2.5rem !important;
+  }
+  
+  .timeline-item .timeline-content::before {
+    left: 16px !important;
+    right: auto !important;
+  }
+  
+  .timeline-item .timeline-content-hinges {
+    left: 12px !important;
+    right: auto !important;
+  }
+  
+  .timeline-item .timeline-content::after {
+    right: 12px !important;
+    left: auto !important;
   }
 }
+
 
 
 /* Contact Section & Form */
